@@ -21,7 +21,13 @@ class _LoginRegisterState extends State<LoginRegisterPage>{
 
   //methods
   bool validateAndSaveUser(){
-
+    final form = formKey.currentState;
+    if(form.validate()){
+      form.save();
+      return true;
+    }else{
+      return false;
+    }
   }
 
   void moveToRegister(){
