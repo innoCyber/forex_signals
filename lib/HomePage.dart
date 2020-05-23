@@ -20,7 +20,14 @@ class HomePage extends StatefulWidget{
 
 class _HomePageState extends State<HomePage>{
 
-  void _logoutUser(){}
+  void _logoutUser() async{
+    try{
+      await widget.auth.signOut();
+      widget.onSignedOut();
+    }catch(e){
+      print(e.toString());
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
