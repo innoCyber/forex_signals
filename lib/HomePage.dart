@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
+import 'Authentication.dart';
 
 class HomePage extends StatefulWidget{
+
+  HomePage({
+    this.auth,
+    this.onSignedOut,
+});
+
+  final AuthImplementation auth;
+  final VoidCallback onSignedOut;
+
+
   @override
   State<StatefulWidget> createState(){
     return _HomePageState();
