@@ -56,13 +56,13 @@ class _MappingPageState extends State<MappingPage>{
       case AuthStatus.notSignedIn:
         return new LoginRegisterPage(
           auth: widget.auth,
-          onSignedIn: _signedIn;
-        )
+          onSignedIn: _signedIn
+        );
 
       case AuthStatus.signedIn:
         return new HomePage(
             auth: widget.auth,
-            onSignedOut: _signedOut;
+            onSignedOut: _signedOut
         );
 
     }

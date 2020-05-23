@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:forexsignals/HomePage.dart';
-import 'package:forexsignals/LoginRegisterPage.dart';
+import 'package:forexsignals/Authentication.dart';
+import 'package:forexsignals/Mapping.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.pink,
       ),
 
-      home: HomePage(),
+      home: MappingPage(auth: Auth(),),
     );
   }
 }
