@@ -18,5 +18,9 @@ class Auth implements AuthImplementation{
     FirebaseUser user = (await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password)).user;
     return user.uid;
   }
+
+  Future<void> signOut() async{
+    _firebaseAuth.signOut();
+  }
 }
 
