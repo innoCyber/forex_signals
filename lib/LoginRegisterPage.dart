@@ -87,6 +87,14 @@ class _LoginRegisterState extends State<LoginRegisterPage>{
       SizedBox(height: 10.0,),
       new TextFormField(
         decoration: new InputDecoration(labelText: 'Password'),
+
+        obscureText: true,
+        validator: (value){
+          return value.isEmpty? 'Password is required':null;
+        },
+        onSaved: (value){
+          return _password = value;
+        },
       ),
       SizedBox(height: 20.0,),
     ];
